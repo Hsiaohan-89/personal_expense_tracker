@@ -14,9 +14,9 @@ def main():
 
     # Get expense from User
     expense = get_expense_data()
-    print(expense)
+
     # Save expense to CSV file
-    save_expense_to_file()
+    save_expense_to_file(expense)
     # Summarise expense total
     expense_total()
     # show remainning budget
@@ -46,6 +46,7 @@ def get_expense_data():
             print(f"{ind + 1}  {categeroy_name}")
 
         # Range of the selection for user to select
+        # expept valueError for invlid input
         value_range = f"[1 - {len(expense_categories)}]"
         try:
             selected_ind = int(
@@ -65,11 +66,11 @@ def get_expense_data():
             print("invalid input. Please try again!")
 
 
-def save_expense_to_file():
+def save_expense_to_file(expense):
     """
 
     """
-    print(f"You have saved: ")
+    print(f"You have saved: {expense} ")
 
 
 def expense_total():
