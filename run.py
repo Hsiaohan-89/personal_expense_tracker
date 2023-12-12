@@ -21,7 +21,7 @@ def main():
     save_expense_to_file(expense, expense_file_path)
 
     # Summarise expense total
-    expense_total()
+    summarise_expense()
 
     # show remainning budget
 
@@ -79,7 +79,7 @@ def save_expense_to_file(expense, expense_file_path):
         file.write(f"{expense.name},{expense.amount},{expense.category}\n")
 
 
-def expense_total():
+def summarize_expense():
     """
 
     """
