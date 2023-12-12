@@ -15,7 +15,7 @@ def main():
     save_expense_to_file()
     # Summarise expense total
     expense_total()
-    # show remainning budget    
+    # show remainning budget
 
 
 def get_expense_data():
@@ -27,7 +27,7 @@ def get_expense_data():
     """
     expense_name = input(f"Enter the name of the item:")
     expense_amount = float(input(f"Enter the amount of the expense:"))
-    
+
     expense_categories = [
         "Home",
         "Food",
@@ -42,27 +42,23 @@ def get_expense_data():
             print(f"{ind + 1}  {categeroy_name}")
 
         # Range of the selection for user to select
-        # try:
-        #     selected_ind = int(input(f"Enter a category number:"))
-        #     if 1 <= selected_ind <= len(expense_categories):
-        #         expense_categories = expense_categories[selected_ind - 1]
-        #         print(f"You selected: {expense_categories}")
-        #         raise NameError(
-        #             f"Please enter a valid number, you provided {selected_ind}"
-        #         )
-        # except NameError as e:
-        #     print(f"Invalid input: {e} Please try again.")
         value_range = f"[1 - {len(expense_categories)}]"
-        
-        selected_ind = int(input(f"Enter a category number {value_range}:")) -1
+        try:
+            selected_ind = int(input(f"Enter a category number {value_range}:")) - 1
 
-        # check for the value range
-        if selected_ind in range(len(expense_categories)):
-            break
-        else:
-            print("Invalid category. Please try again!")
-
-
+            if 0 <= selected_ind < len(expense_categories):
+                selected_category = expense_categories[selected_ind]
+                print(f"You selected: {selected_category}")
+            else:
+                print("invalid selection. Please enter a valid number.")
+        except ValueError:
+            print("invalid input. Please try again!")
+       
+        # # check for the value range
+        # if selected_ind in range(len(expense_categories)):
+        #     break
+        # else:
+        #     print("Invalid category. Please try again!")
 def save_expense_to_file():
     """
     
