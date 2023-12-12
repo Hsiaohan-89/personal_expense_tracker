@@ -44,7 +44,8 @@ def get_expense_data():
         # Range of the selection for user to select
         value_range = f"[1 - {len(expense_categories)}]"
         try:
-            selected_ind = int(input(f"Enter a category number {value_range}:")) - 1
+            selected_ind = int(
+                input(f"Enter a category number {value_range}:")) - 1
 
             if 0 <= selected_ind < len(expense_categories):
                 selected_category = expense_categories[selected_ind]
@@ -53,22 +54,18 @@ def get_expense_data():
                 print("invalid selection. Please enter a valid number.")
         except ValueError:
             print("invalid input. Please try again!")
-       
-        # # check for the value range
-        # if selected_ind in range(len(expense_categories)):
-        #     break
-        # else:
-        #     print("Invalid category. Please try again!")
+
+
 def save_expense_to_file():
     """
-    
+
     """
     print(f"You have saved: ")
 
 
 def expense_total():
     """
-    
+
     """
     print(f"You have spend: ")
 
