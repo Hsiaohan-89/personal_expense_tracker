@@ -10,15 +10,19 @@ def main():
     """
     print(f"Welcome to Personal Expenses Tracker!")
     print(f"Please follow the instruction to enter your expense.")
-    print(f"Exp: Name of item, amount of item, categroy of item.\n")
+    print(f"Exp: Name of item, costs of item, categroy of item.\n")
+    # Declaring a file name
+    expense_file_path = "expenses.csv"
 
     # Get expense from User
     expense = get_expense_data()
 
     # Save expense to CSV file
-    save_expense_to_file(expense)
+    save_expense_to_file(expense, expense_file_path)
+
     # Summarise expense total
     expense_total()
+
     # show remainning budget
 
 
@@ -66,11 +70,13 @@ def get_expense_data():
             print("invalid input. Please try again!")
 
 
-def save_expense_to_file(expense):
+def save_expense_to_file(expense, expense_file_path):
     """
-
+    
     """
-    print(f"You have saved: {expense} ")
+    print(f"Saving expense: {expense} to {expense_file_path} ")
+    with open(expense_file_path, "a") as file:
+        file.write(f"{expense.name},{expense.amount},{expense.category}\n")
 
 
 def expense_total():
