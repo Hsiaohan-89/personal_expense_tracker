@@ -14,6 +14,7 @@ def main():
 
     # Get expense from User
     expense = get_expense_data()
+    print(expense)
     # Save expense to CSV file
     save_expense_to_file()
     # Summarise expense total
@@ -53,8 +54,11 @@ def get_expense_data():
             if 0 <= selected_ind < len(expense_categories):
                 selected_category = expense_categories[selected_ind]
                 print(f"You selected: {selected_category}")
-                new_expense = Expense(name, amount, category)
-                return
+                selected_category = expense_categories[selected_ind]
+                new_expense = Expense(
+                    name=expense_name, amount=expense_amount, category=selected_category
+                )
+                return new_expense
             else:
                 print("invalid selection. Please enter a valid number.")
         except ValueError:
