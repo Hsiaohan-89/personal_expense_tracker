@@ -72,7 +72,7 @@ def get_expense_data():
 
 def save_expense_to_file(expense, expense_file_path):
     """
-    
+    Store input expense data into expense csv file.
     """
     print(f"Saving expense: {expense} to {expense_file_path} ")
     with open(expense_file_path, "a") as file:
