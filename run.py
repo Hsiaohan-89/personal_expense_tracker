@@ -1,6 +1,9 @@
 # Your code goes here.
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
+from expense import Expense
+
+
 def main():
     """
     Run all program functions
@@ -10,7 +13,7 @@ def main():
     print(f"Exp: Name of item, amount of item, categroy of item.\n")
 
     # Get expense from User
-    get_expense_data()
+    expense = get_expense_data()
     # Save expense to CSV file
     save_expense_to_file()
     # Summarise expense total
@@ -26,7 +29,7 @@ def get_expense_data():
     The loop will repeatedly request data, until it is valid.
     """
     expense_name = input(f"Enter the name of the item:")
-    expense_amount = float(input(f"Enter the amount of the expense:"))
+    expense_amount = float(input("Enter the amount of the expense:"))
 
     expense_categories = [
         "Home",
@@ -50,6 +53,8 @@ def get_expense_data():
             if 0 <= selected_ind < len(expense_categories):
                 selected_category = expense_categories[selected_ind]
                 print(f"You selected: {selected_category}")
+                new_expense = Expense(name, amount, category)
+                return
             else:
                 print("invalid selection. Please enter a valid number.")
         except ValueError:
