@@ -1,32 +1,48 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Personal Expenses Tracker
 
-Welcome,
+## Overview
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+![Personal Expenses Tracker image](input file path)
 
-## Reminders
+[Open Personal Expenses Tracker Program](input your link)
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## Personal Expenses Tracker
+To make it easier to track daily expenses and understand your cash flow, this program shows how much money you've spent in each category and how much is left in your budget.
 
-## Creating the Heroku app
+[Back to top](#personal-expenses-tracker)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+# Feature
+### How to use
+  - Follow the insruction input the name that you spent on.
+  - Give it a amount of the money that you spent.
+  - Select the relevent category for the item that you spent.
+  
+## Existing Features
+  - 
+[Back to top](#personal-expenses-tracker)
+## Future Features
+[Back to top](#personal-expenses-tracker)
+# Data Model
+[Back to top](#personal-expenses-tracker)
+# Testing
+[Back to top](#personal-expenses-tracker)
+# Bugs
+## Solved Bugs
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Remaining Bugs
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Validator Testing
+[Back to top](#personal-expenses-tracker)
+# Deployment
+This project was deployed using Code Institute's mock terminal for Heroku.
+ - Steps for deployment:
+   - 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
+[Back to top](#personal-expenses-tracker)
+# Credits
+ - Code Institute for the deployment terminal
 
-## Constraints
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+[Back to top](#personal-expenses-tracker)
 
----
-
-Happy coding!
