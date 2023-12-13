@@ -19,10 +19,10 @@ def main():
     budget = 500
 
     # Get expense from User
-    # expense = get_expense_data()
+    expense = get_expense_data()
 
     # Save expense to CSV file
-    # save_expense_to_file(expense, "expenses.csv")
+    save_expense_to_file(expense, "expenses.csv")
 
     # Summarise expense total
     summarise_expense(expense_file_path, budget)
@@ -79,7 +79,7 @@ def save_expense_to_file(expense, expense_file_path):
     """
     Store input expense data into expense csv file.
     """
-    print(f"Saving expense: {expense} to {expense_file_path} ")
+    print(f"Saving expense: {expense} to {expense_file_path}\n ")
     with open(expense_file_path, "a") as file:
         file.write(f"{expense.name},{expense.amount},{expense.category}\n")
 
@@ -87,6 +87,8 @@ def save_expense_to_file(expense, expense_file_path):
 def summarise_expense(expense_file_path, budget):
     """
     Summarize the total expense by read each line category 
+    create if else statement for stating overbudget or how much you can spent
+    on each day.
     """
 
     expenses = []
