@@ -84,7 +84,7 @@ def save_expense_to_file(expense, expense_file_path):
 
 def summarise_expense(expense_file_path, budget):
     """
-    Summarize the total expense by read each line category 
+    Summarize the total expense by read each line category
     create if else statement for stating overbudget or how much you can spent
     on each day.
     """
@@ -132,7 +132,6 @@ def summarise_expense(expense_file_path, budget):
 
     # Get the number of days in the current month
     days_in_month = calendar.monthrange(now.year, now.month)[1]
-    
     # calculate the remaining of days in the current month
     remaining_days = days_in_month - now.day
     print("Remaining days in the current month:", remaining_days)
