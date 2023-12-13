@@ -13,8 +13,8 @@ def main():
     print(f"Exp: Name of item, costs of item, categroy of item.\n")
     # Declaring a file name
     expense_file_path = "expenses.csv"
-    
-    budget = 500
+
+    budget = 200
 
     # Get expense from User
     # expense = get_expense_data()
@@ -63,7 +63,7 @@ def get_expense_data():
                 print(f"You selected: {selected_category}")
                 selected_category = expense_categories[selected_ind]
                 new_expense = Expense(
-                    name=expense_name, amount=expense_amount, 
+                    name=expense_name, amount=expense_amount,
                     category=selected_category
                 )
                 return new_expense
@@ -86,20 +86,21 @@ def summarise_expense(expense_file_path, budget):
     """
     Summarize the total expense by read each line category 
     """
-    
+
     expenses = []
     with open(expense_file_path, "r") as file:
         lines = file.readlines()
         for line in lines:
             stripped_line = line.strip()
-            expense_name, expense_amount, expense_categories = stripped_line.split(",")
-            
+            expense_name, expense_amount, expense_categories = stripped_line.split(
+                ",")
+
             line_expense = Expense(
-                name=expense_name, amount=float(expense_amount), 
+                name=expense_name, amount=float(expense_amount),
                 category=expense_categories)
             expenses.append(line_expense)
 
-    # Create a dict to get each items         
+    # Create a dict to get each items
     total_by_category = {}
     for expense in expenses:
         key = expense.category
@@ -111,9 +112,16 @@ def summarise_expense(expense_file_path, budget):
     for key, amount in total_by_category.items():
         print(f" {key}: £{amount:.2f}")
 
-    # calculate total expense     
+    # calculate total expense
     total_expense = sum([expense.amount for expense in expenses])
-    print(f"You have total spent £{total_expense} in this month!")  
+    print(f"You have total spent £{total_expense} in this month!")
+
+    # remanining budget
+    remainning_budget = budget - total_expense
+    if remainning_budget < 0:
+        print(f"You over spent £{abs(remainning_budget)} for this month!")
+    else:
+        print(f"You have left £{remainning_budget} for this month!")
 
 
 if __name__ == "__main__":
