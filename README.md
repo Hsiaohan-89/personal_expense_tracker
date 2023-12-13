@@ -55,12 +55,31 @@ To make it easier to track daily expenses and understand your cash flow, this pr
 
   ![Expense tracker](assets/READMEfile/fulltesting.jpg)
 
+  - input validation and error-checking for selecting category is out of range or key in invalid data
+
+  ![valid check](assets/READMEfile/invalidtest.jpg)
+
 [Back to top](#personal-expenses-tracker)
 ## Future Features
+
+- **Remove of the expense from list**
+- **Add emoji to make it more fun**
+- **User can input monthly budget**
+
 [Back to top](#personal-expenses-tracker)
 # Data Model
+
+
 [Back to top](#personal-expenses-tracker)
 # Testing
+I have manually tested this project by doing the following:
+
+  - Passed the code through a PEP8 inter and confirmed there are no problems
+
+  ![PEP8 Testing]()
+
+  - Given invalid inputs: strings when selecting categories, 
+
 [Back to top](#personal-expenses-tracker)
 # Bugs
 ## Solved Bugs
