@@ -13,6 +13,9 @@ def main():
     print(f"Exp: Name of item, costs of item, categroy of item.\n")
     # Declaring a file name
     expense_file_path = "expenses.csv"
+    
+    budget = 500
+
     # Get expense from User
     # expense = get_expense_data()
 
@@ -20,7 +23,7 @@ def main():
     # save_expense_to_file(expense, "expenses.csv")
 
     # Summarise expense total
-    summarise_expense(expense_file_path)
+    summarise_expense(expense_file_path, budget)
 
     # show remainning budget
 
@@ -79,7 +82,7 @@ def save_expense_to_file(expense, expense_file_path):
         file.write(f"{expense.name},{expense.amount},{expense.category}\n")
 
 
-def summarise_expense(expense_file_path):
+def summarise_expense(expense_file_path, budget):
     """
     Summarize the total expense by read each line category 
     """
@@ -107,6 +110,10 @@ def summarise_expense(expense_file_path):
     print("Expense by Category: ")
     for key, amount in total_by_category.items():
         print(f" {key}: £{amount:.2f}")
+
+    # calculate total expense     
+    total_expense = sum([expense.amount for expense in expenses])
+    print(f"You have total spent £{total_expense} in this month!")  
 
 
 if __name__ == "__main__":
