@@ -60,7 +60,8 @@ def get_expense_data():
                 print(f"You selected: {selected_category}")
                 selected_category = expense_categories[selected_ind]
                 new_expense = Expense(
-                    name=expense_name, amount=expense_amount, category=selected_category
+                    name=expense_name, amount=expense_amount, 
+                    category=selected_category
                 )
                 return new_expense
             else:
@@ -88,13 +89,15 @@ def summarise_expense(expense_file_path):
         lines = file.readlines()
         for line in lines:
             stripped_line = line.strip()
-            expense_name, expense_amount, expense_categories = stripped_line.split(
-                ",")
+            expense_name, expense_amount, 
+            expense_categories = stripped_line.split(",")
             
             line_expense = Expense(
-                name=expense_name, amount=expense_amount, category=expense_categories)
+                name=expense_name, amount=expense_amount, 
+                category=expense_categories)
             expenses.append(line_expense)
 
+    # Create a dict to get each items         
 
 
 if __name__ == "__main__":
