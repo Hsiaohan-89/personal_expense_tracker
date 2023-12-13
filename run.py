@@ -83,11 +83,12 @@ def summarise_expense(expense_file_path):
     Summarize the total expense by read each line category 
     """
     print(f"You have spend: ")
-    expense = []
+    expenses = []
     with open(expense_file_path, "r") as file:
         lines = file.readlines()
-        for line in range(len(lines)):
-            print(line, lines[line])
+        for line in lines:
+            stripped_line = line.strip()
+            line_items = line.split(",")
     
 
 
