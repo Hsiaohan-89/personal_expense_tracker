@@ -16,7 +16,7 @@ def main():
     # Declaring a file name
     expense_file_path = "expenses.csv"
 
-    budget = 500
+    budget = 1000
 
     # Get expense from User
     expense = get_expense_data()
@@ -26,8 +26,6 @@ def main():
 
     # Summarise expense total
     summarise_expense(expense_file_path, budget)
-
-    # show remainning budget
 
 
 def get_expense_data():
@@ -144,6 +142,8 @@ def summarise_expense(expense_file_path, budget):
         print(f"You can only spent £{daily_budget:.2f} in a day!")
     else:
         print("You are over the budget for a month!")
+
+
 
 
 if __name__ == "__main__":
