@@ -14,10 +14,10 @@ def main():
     # Declaring a file name
     expense_file_path = "expenses.csv"
     # Get expense from User
-    expense = get_expense_data()
+    # expense = get_expense_data()
 
     # Save expense to CSV file
-    save_expense_to_file(expense, "expenses.csv")
+    # save_expense_to_file(expense, "expenses.csv")
 
     # Summarise expense total
     summarise_expense(expense_file_path)
@@ -88,8 +88,13 @@ def summarise_expense(expense_file_path):
         lines = file.readlines()
         for line in lines:
             stripped_line = line.strip()
-            line_items = line.split(",")
-    
+            expense_name, expense_amount, expense_categories = stripped_line.split(
+                ",")
+            
+            line_expense = Expense(
+                name=expense_name, amount=expense_amount, category=expense_categories)
+            expenses.append(line_expense)
+
 
 
 if __name__ == "__main__":
