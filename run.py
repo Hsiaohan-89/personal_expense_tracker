@@ -83,21 +83,30 @@ def summarise_expense(expense_file_path):
     """
     Summarize the total expense by read each line category 
     """
-    print(f"You have spend: ")
+    
     expenses = []
     with open(expense_file_path, "r") as file:
         lines = file.readlines()
         for line in lines:
             stripped_line = line.strip()
-            expense_name, expense_amount, 
-            expense_categories = stripped_line.split(",")
+            expense_name, expense_amount, expense_categories = stripped_line.split(",")
             
             line_expense = Expense(
-                name=expense_name, amount=expense_amount, 
+                name=expense_name, amount=float(expense_amount), 
                 category=expense_categories)
             expenses.append(line_expense)
 
     # Create a dict to get each items         
+    total_by_category = {}
+    for expense in expenses:
+        key = expense.category
+        if key in total_by_category:
+            total_by_category[key] += expense.amount
+        else:
+            total_by_category[key] = expense.amount
+    print("Expense by Category: ")
+    for key, amount in total_by_category.items():
+        print(f" {key}: £{amount:.2f}")
 
 
 if __name__ == "__main__":
