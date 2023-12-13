@@ -35,8 +35,8 @@ def get_expense_data():
     Run a while loop for categories for user to select the valid data.
     The loop will repeatedly request data, until it is valid.
     """
-    expense_name = input(f"Enter the name of the item:")
-    expense_amount = float(input("Enter the amount of the expense:"))
+    expense_name = input(f"Enter the name of the item:\n")
+    expense_amount = float(input("Enter the amount of the expense:\n"))
 
     expense_categories = [
         "Home",
@@ -56,7 +56,7 @@ def get_expense_data():
         value_range = f"[1 - {len(expense_categories)}]"
         try:
             selected_ind = int(
-                input(f"Enter a category number {value_range}:")) - 1
+                input(f"Enter a category number {value_range}:\n")) - 1
 
             if 0 <= selected_ind < len(expense_categories):
                 selected_category = expense_categories[selected_ind]
@@ -142,8 +142,6 @@ def summarise_expense(expense_file_path, budget):
         print(f"You can only spent £{daily_budget:.2f} in a day!")
     else:
         print("You are over the budget for a month!")
-
-
 
 
 if __name__ == "__main__":

@@ -14,7 +14,7 @@ To make it easier to track daily expenses and understand your cash flow, this pr
 # Feature
 ### How to use
   - Follow the insruction input the name that you spent on.
-  - Give it a amount of the money that you spent.
+  - Give it a cost of the item that you spent with.
   - Select the relevent category for the item that you spent.
   
 ## Existing Features
