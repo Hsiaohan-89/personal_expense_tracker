@@ -16,7 +16,7 @@ def main():
     # Declaring a file name
     expense_file_path = "expenses.csv"
 
-    budget = 5000
+    budget = 500
 
     # Get expense from User
     # expense = get_expense_data()
@@ -135,8 +135,7 @@ def summarise_expense(expense_file_path, budget):
     
     # calculate the remaining of days in the current month
     remaining_days = days_in_month - now.day
-
-    # print(f"Your remaining budget is: £{remainning_budget}")
+    print("Remaining days in the current month:", remaining_days)
 
     daily_budget = remainning_budget / remaining_days
     if daily_budget > 0:
