@@ -131,9 +131,7 @@ I have manually tested this project by doing the following:
 
 ## Remaining Bugs
 
-- I have unsolve bug after amend my code.
-
-![Unsolved bug](assets/READMEfile/error01.jpg)
+- I have no remaining bug left.
 
 ## Validator Testing
 
