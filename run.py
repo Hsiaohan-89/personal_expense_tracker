@@ -36,7 +36,14 @@ def get_expense_data():
     The loop will repeatedly request data, until it is valid.
     """
     expense_name = input(f"Enter the name of the item:\n")
-    expense_amount = float(input("Enter the amount of the expense:\n"))
+    
+    while True:
+        try:
+            expense_amount = float(input("Enter the amount of the expense:\n"))
+            print(f"Expense amount:{expense_amount}")
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
 
     expense_categories = [
         "Home",
