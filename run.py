@@ -36,7 +36,7 @@ def get_expense_data():
     The loop will repeatedly request data, until it is valid.
     """
     expense_name = input(f"Enter the name of the item:\n")
-    
+
     while True:
         try:
             expense_amount = float(input("Enter the amount of the expense:\n"))
@@ -129,10 +129,10 @@ def summarise_expense(expense_file_path, budget):
     remainning_budget = budget - total_expense
     if remainning_budget < 0:
         print(f"You have over spent £{abs(remainning_budget)} for this month!")
-    elif remainning_budget > 0:
-        print(f"You have left £{remainning_budget} for this month!")
+    # elif remainning_budget > 0:
+    #     print(f"You have left £{remainning_budget} for this month!")
     else:
-        print(daily_budget)
+        print(f"You have left £{remainning_budget} for this month!")
 
     # Get the current date
     now = datetime.datetime.now()

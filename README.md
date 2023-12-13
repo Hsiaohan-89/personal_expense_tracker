@@ -85,13 +85,13 @@ The primary function used on the application are :
     Create three variable name, amount, categories to store data.
     Run a while loop for categories for user to select the valid data.
     The loop will repeatedly request data, until it is valid.
-- `save_expense_to_file()` 
+- `save_expense_to_file()`
   - Store input expense data into expense csv file.
 - `summarise_expense()`
-    - Summarize the total expense by read each line category
-      create if else statement for stating overbudget or how much you can spent on each day.
+  - Summarize the total expense by read each line category
+    create if else statement for stating overbudget or how much you can spent on each day.
 - `class Expense`
-    - The classes for the expenses to store our information
+  - The classes for the expenses to store our information
 
 [Back to top](#personal-expenses-tracker)
 
@@ -131,7 +131,9 @@ I have manually tested this project by doing the following:
 
 ## Remaining Bugs
 
+- I have unsolve bug after amend my code.
 
+![Unsolved bug](assets/READMEfile/error01.jpg)
 
 ## Validator Testing
 
@@ -206,3 +208,8 @@ To deploy this page to GitHub Pages from its GitHub repository, the following st
   - [w3schools](https://www.w3schools.com/)
 
 [Back to top](#personal-expenses-tracker)
+
+## Acknowledgements
+
+- I would like to tkank my friend who gave me some of the advice for my personal expense tracker project.
+- Also like to thank all of the friends in slack who helped me solve my error for my project.
