@@ -2,6 +2,8 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 from expense import Expense
+import calendar
+import datetime
 
 
 def main():
@@ -14,7 +16,7 @@ def main():
     # Declaring a file name
     expense_file_path = "expenses.csv"
 
-    budget = 200
+    budget = 5000
 
     # Get expense from User
     # expense = get_expense_data()
@@ -119,9 +121,28 @@ def summarise_expense(expense_file_path, budget):
     # remanining budget
     remainning_budget = budget - total_expense
     if remainning_budget < 0:
-        print(f"You over spent £{abs(remainning_budget)} for this month!")
-    else:
+        print(f"You have over spent £{abs(remainning_budget)} for this month!")
+    elif remainning_budget > 0:
         print(f"You have left £{remainning_budget} for this month!")
+    else:
+        print(daily_budget)
+
+    # Get the current date
+    now = datetime.datetime.now()
+
+    # Get the number of days in the current month
+    days_in_month = calendar.monthrange(now.year, now.month)[1]
+    
+    # calculate the remaining of days in the current month
+    remaining_days = days_in_month - now.day
+
+    # print(f"Your remaining budget is: £{remainning_budget}")
+
+    daily_budget = remainning_budget / remaining_days
+    if daily_budget > 0:
+        print(f"You can only spent £{daily_budget:.2f} in a day!")
+    else:
+        print("You are over the budget for a month!")
 
 
 if __name__ == "__main__":
