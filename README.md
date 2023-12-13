@@ -164,6 +164,15 @@ To deploy this page to GitHub Pages from its GitHub repository, the following st
 # Credits
  - Code Institute for the deployment terminal
 
+ ### Content
+  - Some of the frame design ideas were borrowed and adapted from various sites below:
+      - [W3School](https://www.w3schools.com/)
+      - [Chat GPT](https://chat.openai.com/)
+      - [Shaun Halverson YouTube Channel](https://www.youtube.com/@ShaunHalverson)
+      - [Pixegami YouTube Channel](https://www.youtube.com/@pixegami)
+      - [geeksforgeeks](https://www.geeksforgeeks.org/)
+      - [w3schools](https://www.w3schools.com/)
+
 
 [Back to top](#personal-expenses-tracker)
 
