@@ -122,8 +122,43 @@ This project was deployed using Code Institute's mock terminal for Heroku.
    - Your App name must be unique, and then choose a region depend on your locations, and click *Create App*.
    - Selecting *setting* tab, and find *Config Vars*, and set the value of KEY to *PORT*, and the value to *8000* then select add.
    - Then go down to the Buildpacks, select *Add buildpack*, select *Python* and save changes, and Add one more buildpack select Node.js and save changes. The order of the buildpacks is important, **python** first then **Node.js** second.
-    
 
+Heroku needs two additional files in order to deploy properly.
+
+- requirements.txt
+- Procfile
+
+You can install this project's **requirements** (where applicable) using:
+
+- pip3 install -r requirements.txt
+
+If you have your own packages that have been installed, then the requirements file needs updated using:
+
+- pip3 freeze --local > requirements.txt
+
+The **Procfile** can be created with the following command:
+
+- echo web: node index.js > Procfile
+
+For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+
+
+- Select **Automatic Deployment** from the Heroku app.
+
+
+The frontend terminal should now be connected and deployed to Heroku! 
+
+### Deploying on GitHub Pages
+
+To deploy this page to GitHub Pages from its GitHub repository, the following steps were taken:
+
+1. Log into [GitHub](https://github.com/login "Link to GitHub login page") or [create an account](https://github.com/join "Link to GitHub create account page").
+2. Locate the [GitHub Repository](https://github.com/Hsiaohan-89/Iris-Chen-portfolio "Link to GitHub Repo").
+3. At the top of the repository, select Settings from the menu items.
+4. Scroll down the Settings page to the "Pages" section.
+5. Under "Source" click the drop-down menu labelled "None" and select "Main".
+6. Upon selection, the page will automatically refresh meaning that the website is now deployed.
+7. Scroll back down to the "Pages" section to retrieve the deployed link.
 
 [Back to top](#personal-expenses-tracker)
 # Credits
